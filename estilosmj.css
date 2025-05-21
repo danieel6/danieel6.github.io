@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #1e1e1e; /* Azul oscuro */
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+header {
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#guess-grid {
+    display: grid;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.tile {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2f2f2f; /* Gris oscuro */
+    border: 1px solid #aaa;
+    font-size: 1.5rem;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+/* Colores para las letras */
+.tile.correct {
+    background-color: #538d4e; /* Verde (correcto) */
+    color: white;
+}
+
+.tile.present {
+    background-color: #b59f3b; /* Amarillo (presente) */
+    color: white;
+}
+
+.tile.absent {
+    background-color: #3a3a3c; /* Gris oscuro (ausente) */
+    color: white;
+}
+
+/* Teclado virtual */
+.keyboard {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.keyboard-row {
+    display: flex;
+    gap: 0.2rem;
+}
+
+.tecla {
+    background-color: #3a3a3c;
+    color: white;
+    font-size: medium;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 1.1rem;
+    margin: 0.2rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.tecla.correct {
+    background-color: #538d4e; /* Verde (correcto) */
+    color: white;
+}
+
+.tecla.present {
+    background-color: #b59f3b; /* Amarillo (presente) */
+    color: white;
+}
+
+.tecla.absent {
+    background-color: #3a3a3c; /* Gris oscuro (ausente) */
+    color: white;
+}
+
+.tecla:hover {
+    transform: scale(1.1); 
+}
+
+.tecla.correct:hover {
+    background-color: #4c7e44; 
+}
+
+.tecla.present:hover {
+    background-color: #9f7b2f; 
+}
+
+.tecla.absent:hover {
+    background-color: #2e2e2e; 
+}
+
+/*----------------------------------------------*/
+.modal {
+  display: flex;
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(255,255,255,0.1);
+}
+
+.modal-content h2 {
+  margin-top: 0;
+}
+
+.modal-content button {
+  margin-top: 1.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #538d4e;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-content button:hover {
+  background-color: #436d3a;
+}
+
+.indicador {
+  display: inline-block;
+  width: 1.2em;
+  height: 1.2em;
+  margin-right: 0.5em;
+  border-radius: 3px;
+}
+
+.indicador.correct { background-color: #538d4e; }
+.indicador.present { background-color: #b59f3b; }
+.indicador.absent { background-color: #3a3a3c; }
+

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>El Elemento del Día</title>
+  <link rel="stylesheet" href="estilosmj.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <h1>El Elemento del Día</h1>
+  </header>
+  <main>
+    <section class="game-container">
+      <div id="guess-grid">
+      </div>
+      <br>
+      <div class="keyboard">
+      </div>
+    </section>
+  </main>
+  <footer>
+
+  </footer>
+  <script src="script.js"></script>
+
+  
+  <div id="instruccionesModal" class="modal">
+    <div class="modal-content">
+      <h2>¿Cómo jugar?</h2>
+      <p><br>Debes adivinar el nombre de un elemento químico. 
+        <br>Tienes 6 intentos.<br>
+        Las letras cambiaran de color segun: </p>
+      <ul style="text-align: left;">
+        <li><span class="indicador correct"></span> Letra correcta en la posición correcta</li>
+        <li><span class="indicador present"></span> Letra correcta en posición incorrecta</li>
+        <li><span class="indicador absent"></span> La letra no está en la palabra</li>
+      </ul>
+      <button id="cerrarModal">Entendido</button>
+    </div>
+  </div>
+
+</body>
+
+</html>
