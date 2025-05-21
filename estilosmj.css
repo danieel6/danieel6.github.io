@@ -180,3 +180,110 @@ h1 {
 .indicador.present { background-color: #b59f3b; }
 .indicador.absent { background-color: #3a3a3c; }
 
+/*-------------------------------------------------------*/
+.navbar a {
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-right: 40px;
+}
+
+.navbar ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 5px;
+  position: relative;
+}
+.navbar ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.navbar ul li::after {
+  content: "";
+  height: 3px;
+  width: 0%;
+  background: #71b5f5;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  transition: 0.9s;
+}
+
+.navbar ul li:hover:after {
+  width: 75%;
+}
+/*----------------------------------------------------------------*/
+@media (max-width: 768px) {
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 1rem 0;
+  }
+
+  .navbar ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+  }
+
+  .navbar ul li {
+    margin: 10px 0;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar a {
+    font-size: 18px;
+    margin-right: 0;
+  }
+
+  .navbar ul li::after {
+    display: none; /* Opcional: Oculta la línea de hover en móviles */
+  }
+}
+
+/*-------------------------------------------------------*/
+/* Responsive para pantallas pequeñas */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .tile {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+
+  #guess-grid {
+    gap: 0.3rem;
+  }
+
+  .keyboard-row {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .tecla {
+    padding: 0.8rem 0.5rem;
+    font-size: 0.9rem;
+    margin: 0.1rem;
+  }
+
+  .modal-content {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .modal-content button {
+    width: 100%;
+    padding: 0.7rem;
+  }
+}
