@@ -657,3 +657,35 @@ body {
     cursor: pointer;
   }
 }
+
+/*----------------------------------------------------------------------------------*/
+@media (max-width: 768px) {
+  html, body {
+    height: 100%;
+    overflow-x: hidden;
+  }
+
+  .periodic {
+    height: auto !important;
+    min-height: 100vh;
+    padding-bottom: 50px; /* espacio para evitar recorte */
+  }
+
+  .periodic-row {
+    height: auto;
+  }
+
+  .cell {
+    width: 12vw;
+    height: 12vw;
+  }
+
+  .element {
+    font-size: 8px;
+  }
+
+  .symbol {
+    font-size: 10px;
+    margin-top: -6px;
+  }
+}
