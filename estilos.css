@@ -90,3 +90,20 @@ body {
     display: none; /* Oculta la línea de hover en móviles */
   }
 }
+
+/*-----------------------------------------------------------------------------------*/
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #1e1e1e;
+  overflow-x: hidden;
+}
+
+body > * {
+  box-sizing: border-box;
+}
+
+.periodic {
+  min-height: 100vh;
+}
